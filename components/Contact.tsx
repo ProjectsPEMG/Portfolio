@@ -21,7 +21,7 @@ export default function Contact() {
           
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">
             Je suis actuellement à la recherche de mon premier poste d&apos;ingénieur pour l&apos;automne 2026. 
-            N&apos;hésitez pas à me contacter pour discuter d&apos;opportunités dans l&apos;Industrie 4.0 ou autres domaines innovants !
+            N&apos;hésitez pas à me contacter pour discuter d&apos;opportunités dans l&apos;Industrie 4.0 ou tout autre domaine innovant !
           </p>
         </motion.div>
 
