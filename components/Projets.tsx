@@ -27,7 +27,7 @@ const mesProjets = [
   },
   {
     id: 4,
-    titre: "Projet de Synthèse (Machine Learning)",
+    titre: "Projet de Synthèse (SPIE/ESEO)",
     description: "Optimisation de la consommation énergétique de fours à arc électrique. Utilisation de la modélisation et du Machine Learning pour réduire l'empreinte énergétique.",
     technos: ["Machine Learning", "Modélisation", "Analyse de données"],
     lienGithub: "#",
@@ -38,6 +38,13 @@ const mesProjets = [
     description: "Réalisation d'un bras robotisé industriel autonome et utilisable facilement. Programmation et contrôle des mouvements de la structure.",
     technos: ["C", "Robotique", "Systèmes Embarqués"],
     lienGithub: "#",
+  },
+  {
+    id: 6,
+    titre: "Appli Météo Web (Projet Perso)",
+    description: "Développement et déploiement d'une application web météorologique personnalisée. Utilisation d'API externes, gestion d'états et interface responsive.",
+    technos: ["Next.js", "React", "API REST", "Vercel"],
+    lienGithub: "https://github.com/ProjectsPEMG/meteo-perso-pemg",
   }
 ];
 
