@@ -1,19 +1,43 @@
-"use client"; // Obligatoire car on utilise des animations côté navigateur
+"use client";
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
+  // On crée un petit tableau pour générer nos étoiles facilement
+  const stars = Array.from({ length: 20 }).map((_, i) => ({
+    id: i,
+    top: `${Math.floor(Math.random() * 100)}%`,
+    left: `${Math.floor(Math.random() * 100)}%`,
+    delay: `${Math.random() * 5}s`,
+    size: Math.random() > 0.5 ? 'w-1 h-1' : 'w-2 h-2', // Alterne entre petites et moyennes étoiles
+  }));
+
   return (
-    // overflow-hidden empêche le site de "déborder" si les halos vont trop sur les côtés
     <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 text-center overflow-hidden transition-colors duration-300">
       
-      {/* Éléments de fond dynamiques (Blobs) */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-300/30 dark:bg-blue-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob pointer-events-none"></div>
-      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-purple-300/30 dark:bg-purple-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-2000 pointer-events-none"></div>
-      <div className="absolute -bottom-8 left-1/3 w-72 h-72 bg-indigo-300/30 dark:bg-indigo-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-4000 pointer-events-none"></div>
+      {/* 1. Le ciel étoilé (Visible UNIQUEMENT en mode sombre) */}
+      <div className="absolute inset-0 hidden dark:block pointer-events-none">
+        {stars.map((star) => (
+          <div
+            key={star.id}
+            className={`absolute bg-white rounded-full animate-twinkle ${star.size}`}
+            style={{
+              top: star.top,
+              left: star.left,
+              animationDelay: star.delay,
+            }}
+          ></div>
+        ))}
+      </div>
 
-      {/* Contenu principal avec effet d'apparition (Fade-in Up) */}
+      {/* 2. Les Blobs (Plus petits et mieux répartis) */}
+      <div className="absolute top-20 left-10 w-48 h-48 bg-blue-300/40 dark:bg-blue-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob pointer-events-none"></div>
+      <div className="absolute top-40 right-20 w-56 h-56 bg-purple-300/40 dark:bg-purple-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-2000 pointer-events-none"></div>
+      <div className="absolute bottom-20 left-1/4 w-52 h-52 bg-indigo-300/40 dark:bg-indigo-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-4000 pointer-events-none"></div>
+      <div className="absolute -bottom-10 right-1/3 w-40 h-40 bg-teal-300/40 dark:bg-teal-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob pointer-events-none" style={{ animationDelay: '3s' }}></div>
+
+      {/* 3. Le contenu principal */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
