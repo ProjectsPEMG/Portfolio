@@ -10,8 +10,8 @@ export default function Contact() {
         <div className="w-16 h-1 bg-blue-600 rounded mx-auto mb-8"></div>
         
         <p className="text-lg text-gray-600 mb-12">
-          Je suis actuellement à la recherche de mon premier poste d'ingénieur pour l'automne 2026. 
-          N'hésitez pas à me contacter pour discuter d'opportunités dans l'Industrie 4.0 ou l'embarqué !
+          Je suis actuellement à la recherche de mon premier poste d&apos;ingénieur pour l&apos;automne 2026. 
+          N&apos;hésitez pas à me contacter pour discuter d&apos;opportunités dans l&apos;Industrie 4.0 ou l&apos;embarqué !
         </p>
 
         {/* Grille des coordonnées */}
@@ -23,7 +23,6 @@ export default function Contact() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.53 4.819a2 2 0 002.94 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
             <h3 className="font-bold text-gray-900 mb-2">Email</h3>
-            {/* L'attribut mailto: permet d'ouvrir le logiciel mail par défaut */}
             <a href="mailto:paulemile.martingrandvoinnet@gmail.com" className="text-blue-600 hover:underline break-all text-sm font-medium">
               paulemile.martingrandvoinnet
               <br/>@gmail.com
@@ -36,7 +35,6 @@ export default function Contact() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </div>
             <h3 className="font-bold text-gray-900 mb-2">Téléphone</h3>
-            {/* L'attribut tel: permet d'appeler directement depuis un smartphone */}
             <a href="tel:0777973070" className="text-blue-600 hover:underline text-sm font-medium">
               07 77 97 30 70
             </a>
