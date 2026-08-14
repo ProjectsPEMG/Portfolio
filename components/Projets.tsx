@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react'; 
+import { ExternalLink, PlayCircle, FileText } from 'lucide-react'; 
 
 const mesProjets = [
   {
@@ -9,48 +9,60 @@ const mesProjets = [
     titre: "Système IoT & Prédiction (Transarc)",
     description: "Développement d'une solution IoT pour la mise à jour à distance sur autocars. Création d'un harnais de câblage sur-mesure et d'un algorithme de prédiction de panne de batterie.",
     technos: ["IoT", "Python", "Électronique Embarquée"],
-    lienGithub: "#",
+    lienGithub: "",
     lienSite: "",
+    lienVideo: "",
+    lienDoc: "",
   },
   {
     id: 2,
     titre: "Vision Industrielle (Opales)",
     description: "Conception d'outils de vision industrielle pour la détection de défauts sur chaîne de production automobile. Classification par Deep Learning et traitement d'images.",
     technos: ["Python", "TensorFlow", "Deep Learning", "Computer Vision"],
-    lienGithub: "#",
+    lienGithub: "",
     lienSite: "",
+    lienVideo: "",
+    lienDoc: "",
   },
   {
     id: 3,
     titre: "Simulation CACES VR (ESEO)",
     description: "Développement d'une simulation en Réalité Virtuelle (RV) dédiée à la formation CACES. Projet réalisé pour offrir un environnement d'apprentissage immersif et sécurisé.",
     technos: ["Unity", "C#", "Réalité Virtuelle (VR)"],
-    lienGithub: "#",
+    lienGithub: "",
     lienSite: "",
+    lienVideo: "", 
+    lienDoc: "",
   },
   {
     id: 4,
     titre: "Projet de Synthèse (SPIE/ESEO)",
     description: "Optimisation de la consommation énergétique de fours à arc électrique. Utilisation de la modélisation et du Machine Learning pour réduire l'empreinte énergétique.",
     technos: ["Machine Learning", "Modélisation", "Analyse de données"],
-    lienGithub: "#",
+    lienGithub: "",
     lienSite: "",
+    lienVideo: "",
+    lienDoc: "",
   },
   {
     id: 5,
-    titre: "ARM'ESEO",
+    titre: "ARM'ESEO (ESEO)",
     description: "Réalisation d'un bras robotisé industriel autonome et utilisable facilement. Programmation et contrôle des mouvements de la structure.",
     technos: ["C", "Robotique", "Systèmes Embarqués"],
-    lienGithub: "#",
+    lienGithub: "",
     lienSite: "",
+    lienVideo: "", 
+    lienDoc: "",
   },
   {
     id: 6,
     titre: "Appli Web Météo (Projet Perso)",
-    description: "Développement et déploiement d'une application web météorologique personnalisée. Utilisation d'API externes (OpenMeteo), gestion d'états et interface responsive.",
+    description: "Développement et déploiement d'une application web météorologique personnalisée. Utilisation d'API externes (comme OpenMeteo), gestion d'états et interface responsive.",
     technos: ["Next.js", "React", "API REST", "Vercel"],
     lienGithub: "https://github.com/ProjectsPEMG/meteo-perso-pemg", 
     lienSite: "https://meteo-perso-pemg.vercel.app",
+    lienVideo: "",
+    lienDoc: "",
   }
 ];
 
@@ -101,30 +113,18 @@ export default function Projets() {
                 ))}
               </div>
               
-              {/* Zone des boutons (Code et/ou Site) */}
+              {/* Zone des boutons adaptatifs */}
               <div className="flex flex-wrap gap-4 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
                 
-                {/* Affiche le bouton GitHub si un lien existe */}
+                {/* 1. Bouton GitHub */}
                 {projet.lienGithub && (
                   <a 
                     href={projet.lienGithub}
-                    target={projet.lienGithub !== "#" ? "_blank" : "_self"}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
-                    {/* SVG manuel de l'icône GitHub (remplace le composant supprimé) */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-4 h-4 mr-2"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 mr-2">
                       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
                       <path d="M9 18c-4.51 2-5-2-7-2"></path>
                     </svg>
@@ -132,7 +132,33 @@ export default function Projets() {
                   </a>
                 )}
 
-                {/* Affiche le bouton du site en direct si un lien existe */}
+                {/* 2. Bouton Document (PDF/PPT) - En vert pour le différencier */}
+                {projet.lienDoc && (
+                  <a 
+                    href={projet.lienDoc}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    Voir le document
+                  </a>
+                )}
+
+                {/* 3. Bouton Vidéo - En rouge pour le côté "YouTube/Vidéo" */}
+                {projet.lienVideo && (
+                  <a 
+                    href={projet.lienVideo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm font-medium text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors"
+                  >
+                    <PlayCircle className="w-4 h-4 mr-2" />
+                    Voir la vidéo
+                  </a>
+                )}
+
+                {/* 4. Bouton Site Web Externe */}
                 {projet.lienSite && (
                   <a 
                     href={projet.lienSite}
@@ -144,6 +170,7 @@ export default function Projets() {
                     Voir le site
                   </a>
                 )}
+
               </div>
             </motion.div>
           ))}
