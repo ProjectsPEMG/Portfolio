@@ -1,7 +1,8 @@
 import Hero from "@/components/Hero";
 import Projets from "@/components/Projets";
 import Competences from "@/components/Competences";
-import Contact from "@/components/Contact"; // <-- Nouvel import
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer"; // <-- Le nouvel import
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Hero />
       <Projets />
       <Competences />
-      <Contact /> {/* <-- Ta nouvelle section */}
+      <Contact />
+      <Footer /> {/* <-- La nouvelle section */}
     </main>
   );
 }
