@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react'; // On importe nos jolies icônes
+import { GitHub, ExternalLink } from 'lucide-react'; // On importe nos jolies icônes
 
 const mesProjets = [
   {
