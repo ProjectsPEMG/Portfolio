@@ -49,7 +49,7 @@ export default function Hero() {
         </span>
         
         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-          Paul-Emile Martin
+          Paul-Émile Martin-Grandvoinnet
         </h1>
         
         <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
