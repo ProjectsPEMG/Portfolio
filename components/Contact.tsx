@@ -82,18 +82,23 @@ export default function Contact() {
 
         </div>
 
-        {/* Animation du bouton de téléchargement */}
+       {/* Animation du bouton de consultation du CV */}
         <motion.a 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
           href="/CV_MARTIN-G_Paul-Emile.pdf" 
-          download="CV_Paul-Emile_MARTIN-GRANDVOINNET.pdf" 
+          target="_blank" // <-- Ouvre dans un nouvel onglet au lieu de télécharger
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white dark:text-gray-900 bg-gray-900 dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
         >
-          <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-          Télécharger mon CV complet (PDF)
+          {/* Icône de consultation (œil ou document) */}
+          <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+          Consulter mon CV complet (PDF)
         </motion.a>
 
       </div>
