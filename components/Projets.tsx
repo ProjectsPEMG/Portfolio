@@ -41,7 +41,7 @@ const mesProjets = [
   },
   {
     id: 6,
-    titre: "Appli Météo Web (Projet Perso)",
+    titre: "Appli Web Météo (Projet Perso)",
     description: "Développement et déploiement d'une application web météorologique personnalisée. Utilisation d'API externes, gestion d'états et interface responsive.",
     technos: ["Next.js", "React", "API REST", "Vercel"],
     lienGithub: "https://github.com/ProjectsPEMG/meteo-perso-pemg",
