@@ -10,7 +10,7 @@ export default function Competences() {
     },
     {
       titre: "Domaines d'Expertise",
-      items: ["Deep Learning / Computer Vision", "IoT & Systèmes Embarqués", "Industrie 4.0", "Développement Logiciel", "Réalité Virtuelle (RA/RV)"]
+      items: ["Deep Learning / Machine Learning", "Computer Vision", "IoT & Systèmes Embarqués", "Industrie 4.0", "Développement Logiciel", "Réalité Virtuelle (RA/RV)"]
     },
     {
       titre: "Logiciels & Outils",
