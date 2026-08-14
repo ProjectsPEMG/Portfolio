@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "eslint"
   },
- "dependencies": {
+"dependencies": {
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "lucide-react": "latest",
-    "next-themes": "latest"
+    "next-themes": "latest",
+    "framer-motion": "latest"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
