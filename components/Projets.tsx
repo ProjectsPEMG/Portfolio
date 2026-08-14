@@ -1,4 +1,7 @@
+"use client";
+
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const mesProjets = [
   {
@@ -43,17 +46,29 @@ export default function Projets() {
     <section id="projets" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-12">
+        {/* Animation du titre */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
             Mes Réalisations & Expériences
           </h2>
           <div className="w-16 h-1 bg-blue-600 rounded"></div>
-        </div>
+        </motion.div>
 
+        {/* Grille avec animation en cascade (stagger) pour les cartes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {mesProjets.map((projet) => (
-            <div 
-              key={projet.id} 
+          {mesProjets.map((projet, index) => (
+            <motion.div 
+              key={projet.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }} // Le delay crée l'effet cascade
               className="group border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-lg dark:hover:shadow-gray-900/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300 flex flex-col bg-white dark:bg-gray-900"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -84,7 +99,7 @@ export default function Projets() {
                 </svg>
                 Voir plus
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
 
