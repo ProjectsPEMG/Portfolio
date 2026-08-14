@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider"; // Nouvel import
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Ingénieur ESEO",
+  title: "Portfolio | PEMG (Ingénieur ESEO)",
   description: "Portfolio de présentation de mes projets en informatique et électronique.",
 };
 
