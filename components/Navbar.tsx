@@ -10,7 +10,6 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Fonction pour fermer le menu quand on clique sur un lien (sur mobile)
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
@@ -18,17 +17,23 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           
-          {/* Logo */}
+          {/* Logo + Photo de profil en miniature */}
           <div className="flex-shrink-0">
-            <Link href="/" onClick={closeMenu} className="font-bold text-2xl text-gray-900 dark:text-white tracking-tighter">
-              PM<span className="text-blue-600 dark:text-blue-500">.</span>
+            <Link href="/" onClick={closeMenu} className="flex items-center gap-3 group">
+              <img 
+                src="/photo-profil.jpg" 
+                alt="Profil" 
+                className="w-10 h-10 rounded-full object-cover border-2 border-transparent group-hover:border-blue-500 transition-colors" 
+              />
+              <span className="font-bold text-2xl text-gray-900 dark:text-white tracking-tighter">
+                PM<span className="text-blue-600 dark:text-blue-500">.</span>
+              </span>
             </Link>
           </div>
 
           {/* Liens Desktop et Boutons */}
           <div className="flex items-center space-x-4 sm:space-x-8">
             
-            {/* Menu Desktop (Caché sur mobile) */}
             <div className="hidden sm:flex space-x-8">
               <Link href="#projets" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">
                 Projets
@@ -41,7 +46,6 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Bouton Soleil/Lune */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -50,7 +54,6 @@ export default function Navbar() {
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
 
-            {/* Bouton Menu Burger (Visible uniquement sur mobile) */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="sm:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
