@@ -22,7 +22,7 @@ const mesProjets = [
     lienGithub: "",
     lienSite: "",
     lienVideo: "",
-    lienDoc: "Rapport Stage S7 ---- MARTIN-GRANDVOINNET Paul-Emile.pdf",
+    lienDoc: "/Rapport Stage S7 ---- MARTIN-GRANDVOINNET Paul-Emile.pdf",
   },
   {
     id: 3,
