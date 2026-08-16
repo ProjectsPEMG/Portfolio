@@ -21,7 +21,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" onClick={closeMenu} className="flex items-center gap-3 group">
               <img 
-                src="/photo-profil.jpg" 
+                src="/photo_profil.jpg" 
                 alt="Profil" 
                 className="w-10 h-10 rounded-full object-cover border-2 border-transparent group-hover:border-blue-500 transition-colors" 
               />
