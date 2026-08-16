@@ -10,9 +10,9 @@ const mesProjets = [
     description: "Développement d'une solution IoT pour la mise à jour à distance sur autocars. Création d'un harnais de câblage sur-mesure et d'un algorithme de prédiction de panne de batterie.",
     technos: ["IoT", "Python", "Électronique Embarquée"],
     lienGithub: "",
-    lienSite: "/Poster_Kairos.pdf",
+    lienSite: "/Poster_Harnais_Kairos.pdf",
     lienVideo: "",
-    lienDoc: "/Rapport_stage_S10.pdf",
+    lienDoc: "/Rapport de stage S10 - MARTIN-GRANDVOINNET Paul-Émile.pdf",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const mesProjets = [
     lienGithub: "",
     lienSite: "",
     lienVideo: "",
-    lienDoc: "",
+    lienDoc: "Rapport Stage S7 ---- MARTIN-GRANDVOINNET Paul-Emile.pdf",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const mesProjets = [
     lienGithub: "",
     lienSite: "",
     lienVideo: "",
-    lienDoc: "/Poster_SPIE.pdf",
+    lienDoc: "/Poster_Projet_Synthèse.pdf",
   },
   {
     id: 5,
