@@ -76,25 +76,6 @@ export default function Hero() {
           </Link>
         </div>
       </motion.div>
-
-      {/* Colonne Droite : Photo de profil */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="flex-1 flex justify-center md:justify-end w-full"
-        >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-            {/* Image principale */}
-            <img 
-              src="/photo_profil.jpg" 
-              alt="Photo de Paul-Emile Martin-Grandvoinnet" 
-              className="rounded-3xl object-cover w-full h-full shadow-2xl border-4 border-white dark:border-gray-800 z-10 relative"
-            />
-            {/* Ombre colorée décorative derrière la photo */}
-            <div className="absolute inset-0 bg-blue-600 rounded-3xl transform translate-x-4 translate-y-4 -z-10 opacity-20 dark:opacity-40"></div>
-          </div>
-        </motion.div>
       
     </section>
   );
