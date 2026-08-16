@@ -6,7 +6,7 @@ export default function Competences() {
   const categories = [
     {
       titre: "Langages & Programmation",
-      items: ["Python", "C", "C#", "C++", "Java", "Arduino"]
+      items: ["Python", "C", "C#", "C++", "Java", "Arduino","HTML/CSS"]
     },
     {
       titre: "Domaines d'Expertise",
