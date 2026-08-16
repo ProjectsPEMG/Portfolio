@@ -31,7 +31,7 @@ const mesProjets = [
     technos: ["Unity", "C#", "Réalité Virtuelle (VR)"],
     lienGithub: "",
     lienSite: "",
-    lienVideo: "", 
+    lienVideo: "https://youtu.be/QFTfpGDqWVM", 
     lienDoc: "",
   },
   {
@@ -51,11 +51,22 @@ const mesProjets = [
     technos: ["C", "Robotique", "Systèmes Embarqués"],
     lienGithub: "",
     lienSite: "",
-    lienVideo: "", 
+    lienVideo: "https://youtu.be/jUgoL7QJ4LA", 
     lienDoc: "",
   },
+  ,
   {
     id: 6,
+    titre: "ESEO NyrioLine (ESEO)",
+    description: "Réalisation d'une chaîne de production miniaturisée avec un robot Nyrio. Programmation de robots et gestion de convoyeurs (Python), création de pinces sur-mesure (CAO SolidWorks), utilisation de caméra pour la détection d'objets (Computer Vision). ",
+    technos: ["Python", "Robotique", "CAO", "Computer Vision"],
+    lienGithub: "", 
+    lienSite: "",
+    lienVideo: "https://youtu.be/9J1mM9V6HDg",
+    lienDoc: "",
+  }
+  {
+    id: 7,
     titre: "Appli Web Météo (Projet Perso)",
     description: "Développement et déploiement d'une application web météorologique personnalisée. Utilisation d'API externes (comme OpenMeteo), gestion d'états et interface responsive.",
     technos: ["Next.js", "React", "API REST", "Vercel"],
