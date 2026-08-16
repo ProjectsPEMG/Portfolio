@@ -54,7 +54,6 @@ const mesProjets = [
     lienVideo: "https://youtu.be/jUgoL7QJ4LA", 
     lienDoc: "",
   },
-  ,
   {
     id: 6,
     titre: "ESEO NyrioLine (ESEO)",
@@ -64,7 +63,7 @@ const mesProjets = [
     lienSite: "",
     lienVideo: "https://youtu.be/9J1mM9V6HDg",
     lienDoc: "",
-  }
+  },
   {
     id: 7,
     titre: "Appli Web Météo (Projet Perso)",
